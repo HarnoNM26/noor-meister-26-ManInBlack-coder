@@ -1,3 +1,7 @@
+** ATTENTION ! ** 
+
+Module A is implemented in main at the moment 
+
 ** CLIENT **
 
 
@@ -32,3 +36,4 @@ cd server
 npm install
 npm run dev
 ```
+
