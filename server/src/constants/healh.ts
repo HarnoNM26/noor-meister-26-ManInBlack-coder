@@ -1,0 +1,1 @@
+export const healthOk = '{"status":"ok","db":"ok"}'
