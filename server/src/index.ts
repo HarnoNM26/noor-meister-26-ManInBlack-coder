@@ -4,6 +4,7 @@ const app = express();
 import healthRouter from '../src/routes/health'
 import readings from '../src/routes/DataImport'
 import eleringPrices from '../src/routes/elering'
+import syncPrices from '../src/routes/elering'
 
 const port = process.env.PORT || '3000'
 
@@ -17,6 +18,7 @@ app.get('/', (req: Request ,res: Response) => {
 app.use('/api/readings', readings)
 app.use('/api/health', healthRouter)
 app.use('/api/nps', eleringPrices)
+app.use('api/sync', syncPrices)
 
 
 

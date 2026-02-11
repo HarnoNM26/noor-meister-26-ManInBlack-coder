@@ -10,6 +10,7 @@ PACKAGES
 1. axios - for doing requests to backend
 2. tailwind - simple styling
 3. mui/x-charts - for dashboards and charts 
+4. mui/x-date - for datepickers start and end range
 
 
 SETUP 

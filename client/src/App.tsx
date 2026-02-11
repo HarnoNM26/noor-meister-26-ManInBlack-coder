@@ -2,11 +2,7 @@ import health from './api/health.api'
 import './App.css'
 import elering from './api/elering.api'
 import { useState } from 'react'
-
-type props = {
   
-}
-
 const healthResponse: any = health.getHealth
 
 
@@ -49,6 +45,14 @@ function App() {
 
       <div className=''>
         <h2> Prices</h2>
+        <div className='selectors'>
+          <select>
+            <option>EE</option>
+            <option>LV</option>
+            <option>FI</option>
+          </select>
+        </div>
+     
         <button onClick={handlePricesFetch}>Sync prices</button>
       </div>
      
