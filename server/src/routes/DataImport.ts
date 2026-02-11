@@ -1,8 +1,8 @@
 import Router from 'express'
-import 
+import { ImportData } from '../http/controllers/import.controller'
 const router = Router()
 
 
-router.post('/import',)
+router.post('/import',ImportData)
 
 export default router
