@@ -1,6 +1,6 @@
 import  axiosInstance  from "axios";
 
-export class health {
+ class health {
     static async getHealth(): Promise<any>{
         const response = await axiosInstance.get('/api/health/check')
         return response
