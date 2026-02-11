@@ -1,11 +1,12 @@
-import express, {  Response} from 'express' 
+import express, { Request, Response} from 'express' 
 import healthRouter from '../src/routes/health'
 
 const app = express();
-const port = process.env.PORT || '3000'
 app.use(express.json());
 
-app.get('/', (res: Response) => {
+const port = process.env.PORT || '3000'
+
+app.get('/', (req: Request ,res: Response) => {
     res.send('hello');
 });
 app.use('/api/health', healthRouter)

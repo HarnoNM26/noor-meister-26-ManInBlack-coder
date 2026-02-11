@@ -1,6 +1,6 @@
 ** ATTENTION ! ** 
 
-Module A is implemented in main at the moment 
+Module A is implemented in main at the moment (Update: operating in main now only and confirming module identifying with specific commit message prefixes, for example: git commit -m "[MODUL-A] message")
 
 ** CLIENT **
 
@@ -36,4 +36,6 @@ cd server
 npm install
 npm run dev
 ```
+
+** DATABASE ** 
 
