@@ -33,15 +33,7 @@ export const cleanData = () => {
         const cleanPriceToMwh = Number(item.price_eur_mwh)
         const cleanSource = "UPLOAD"
 
-    cleanedData.push{
-            id: item.id,
-            
 
-
-            
-
-            }
-         
     })
     
     return cleanedData;

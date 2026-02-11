@@ -14,3 +14,5 @@ class jsonImport {
         .values
     }
 }
+
+export default jsonImport;

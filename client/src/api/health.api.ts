@@ -6,3 +6,5 @@ export class health {
         return response
     }
 }
+
+export default health;

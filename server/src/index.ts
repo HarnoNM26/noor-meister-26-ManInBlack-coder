@@ -1,5 +1,6 @@
 import express, { Request, Response} from 'express' 
 import healthRouter from '../src/routes/health'
+import readings from '../src/routes/DataImport'
 
 const app = express();
 app.use(express.json());
@@ -9,6 +10,8 @@ const port = process.env.PORT || '3000'
 app.get('/', (req: Request ,res: Response) => {
     res.send('hello');
 });
+
+app.use('/api/readings', readings)
 app.use('/api/health', healthRouter)
 
 app.listen(port, () => {
