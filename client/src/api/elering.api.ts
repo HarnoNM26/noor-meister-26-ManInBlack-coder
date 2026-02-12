@@ -1,8 +1,8 @@
 import  AxiosInstance  from "axios";
 
-class elering{
+export class elering{
     static async eleringData(): Promise<any>{
-        const response = AxiosInstance.get('/api/nps/prices')
+        const response = await AxiosInstance.get('/api/nps/prices')
         return response
     };
 

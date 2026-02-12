@@ -2,6 +2,7 @@ import health from './api/health.api'
 import './App.css'
 import elering from './api/elering.api'
 import { useState } from 'react'
+import SimpleAreaChart from './components/charts'
   
 const healthResponse: any = health.getHealth
 
@@ -13,18 +14,14 @@ function App() {
 
   const pricesExternal = async () => {
     try {
-        setLoading(true)
-      const result = await elering.eleringData()
-      if(result) {
-        setLoading(false)
+     const response = await elering.eleringData()
+    return response;
 
-      } 
-      
     } catch (err) {
       console.log('error', err)
       setLoading(false)
-      return;
     }
+    return false
   }
 
   const handlePricesFetch = () => {
@@ -54,6 +51,29 @@ function App() {
         </div>
      
         <button onClick={handlePricesFetch}>Sync prices</button>
+        <div className='data_Charts'>
+          <div className='over_time'>
+            <h2>Hinnad läbi aja</h2>
+            <SimpleAreaChart></SimpleAreaChart>
+          </div>
+          <div>
+            <h2>Päeva keskmine</h2>
+            <SimpleAreaChart></SimpleAreaChart>
+
+          </div>
+          <div>
+              <h2>Asukoha järgi valitud keskmine hind</h2>
+              <SimpleAreaChart></SimpleAreaChart>
+
+          </div>
+          <div>
+
+            <h2>Valitud koha ja ajavahemiku kaart</h2>
+            <SimpleAreaChart></SimpleAreaChart>
+
+
+          </div>
+        </div>
       </div>
      
     </>

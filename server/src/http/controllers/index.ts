@@ -4,6 +4,7 @@ const http = Router();
 
 const routes = [
     {path: '/health', method: '/get',  module: '../routes/health'},
+	{path: '/nps', method: '/get', module: "../routes/elering"}
 ]
 
 routes.forEach(async ({ path, module }) => {

@@ -11,6 +11,7 @@ PACKAGES
 2. tailwind - simple styling
 3. mui/x-charts - for dashboards and charts 
 4. mui/x-date - for datepickers start and end range
+5. mui/styled-engine - for getting charts styles to work
 
 
 SETUP 
@@ -39,4 +40,23 @@ npm run dev
 ```
 
 ** DATABASE ** 
+
+
+** API Architecture ** 
+
+- http: contains controllers
+- migration: contains migration insert scripts
+- models: contains db querying operations
+- routes: contains routes for endpoints
+- services: contains business specific logic 
+- types: contains type schemas
+- utils: contains util functions 
+
+
+** Client Architecture  ** 
+
+- api: contains API requests
+- components: contains components
+- views: should contain views
+- app.tsx: includes main functionalities and main view at the moment
 
