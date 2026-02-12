@@ -1,8 +1,11 @@
 import health from './api/health.api'
 import './App.css'
 import elering from './api/elering.api'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import SimpleAreaChart from './components/charts'
+import Readings from './api/readings.api'
+import Alert from '@mui/material/Alert';
+
   
 const healthResponse: any = health.getHealth
 
@@ -27,6 +30,14 @@ function App() {
   const handlePricesFetch = () => {
   pricesExternal()
   }  
+
+
+   const handleReadingsDeletion = async () => {
+  
+    const response = await Readings.deleteReadings();
+    console.log(response)
+   }
+
   
   if (loading) { 
       return <h2>Loading...</h2>};
@@ -49,8 +60,11 @@ function App() {
             <option>FI</option>
           </select>
         </div>
-     
+     <div className='action_buttons'>
         <button onClick={handlePricesFetch}>Sync prices</button>
+        <button onClick={handleReadingsDeletion}>Delete UPLOAD data</button>
+
+     </div>
         <div className='data_Charts'>
           <div className='over_time'>
             <h2>Hinnad läbi aja</h2>
@@ -81,3 +95,4 @@ function App() {
 }
 
 export default App
+1

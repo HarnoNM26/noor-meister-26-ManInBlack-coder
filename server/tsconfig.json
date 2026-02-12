@@ -9,5 +9,5 @@
       "forceConsistentCasingInFileNames": true
     },
     "include": ["src/**/*.ts", "database.d.ts"],
-    "exclude": ["node_modules"]
+    "exclude": ["node_modules", "./dist", "__tests__", "jest.config.ts"]
   }

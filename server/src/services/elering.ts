@@ -8,8 +8,8 @@ export const getPrices = async () => {
         if(!response.ok) {
             throw new Error(`Response status: ${response.status}`);
         }
-
-        return response
+        console.log(response)
+        return response.status
 
     } catch (error) {
         console.log('INTERNAL SERVER error', error)

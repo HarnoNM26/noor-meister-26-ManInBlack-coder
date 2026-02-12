@@ -14,4 +14,4 @@ export class elering{
         return true
     };
 }
-export default elering;
+export default  elering;

@@ -21,9 +21,6 @@ npm install
 npm run dev
 ```
 
-
-
-
 ** SERVER ** 
 
 PACKAGES 
@@ -40,6 +37,14 @@ npm run dev
 ```
 
 ** DATABASE ** 
+
+For starting database use: 
+
+```
+docker-compose up -d --build 'mysql'
+```
+
+MENTION! : Migrations are not working currently
 
 
 ** API Architecture ** 

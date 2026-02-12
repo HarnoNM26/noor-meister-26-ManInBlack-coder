@@ -4,6 +4,5 @@ import { cleanData } from "../../services/cleanData";
 
 
 export const ImportData = async (req: Request, res: Response) => {
-    const params = req.body
-    const response = await jsonImport.importData(params);
+    
 }

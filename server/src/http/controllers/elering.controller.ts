@@ -9,9 +9,10 @@ export const EleringPrices = async (res: Response) => {
             res.status(404).json({message: 'not found 404'})
         }
             
-        return res.json({response})
+        return res.send(response)
+
     }    catch ( error) {
-        res.status(500).json({message: 'internal server 500', error})
+        console.log(error)
     }
 
 
