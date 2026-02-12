@@ -47,7 +47,7 @@ docker-compose up -d --build 'mysql'
 MENTION! : Migrations are not working currently
 
 
-** API Architecture ** 
+** API Architecture && endpoints ** 
 
 - http: contains controllers
 - migration: contains migration insert scripts
@@ -56,6 +56,12 @@ MENTION! : Migrations are not working currently
 - services: contains business specific logic 
 - types: contains type schemas
 - utils: contains util functions 
+
+endpoints
+
+- /api/sync/prices
+- /api/readings/readings?source=UPLOAD
+- /api/health/check
 
 
 ** Client Architecture  ** 
